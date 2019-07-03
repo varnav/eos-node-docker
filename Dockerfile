@@ -18,8 +18,8 @@ ENV EOSIO_ROOT=/opt/eosio
 ENV LD_LIBRARY_PATH /usr/local/lib
 ENV PATH /opt/eosio/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-COPY ./bin /usr/local/bin
-
+COPY *.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/*.sh
 VOLUME /opt/eosio/config
 VOLUME /opt/eosio/data
 
